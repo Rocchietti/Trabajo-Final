@@ -1,17 +1,28 @@
 body {
-    background-image: url("../IMG/color.jpg"); 
+    background-image: url("IMG/color.jpg"); 
     background-size: cover;
 }
+.contenedor{
+    display: grid;
+    grid-area: "header header"
+    "nav nav"
+    "article article"
+    "footer footer";
+}
+nav{
+    grid-area: nav;
+}
+
 .header {
     margin: 10px; 
-    background-image: url("../IMG/final.jpg");
+    background-image: url("IMG/final.jpg");
     height: 70px; 
     background-size: cover; 
     opacity: 75%;
+    grid-area: header;
 }
 .titulo {
-    font-family: merriweather, serif; 
-    font-weight: lighter; 
+    font-family: merriweather, serif;  
     font-style: italic; 
     font-size: 50px; 
     text-align: center; 
@@ -21,20 +32,41 @@ body {
     display: inline-block;
     position: absolute;
     width: 58px;
-
 }
 .tituloSections{
-    padding: 0px; 
+    display: flex;
+    padding: 10px; 
+    justify-content: space-evenly;
 }
 ul li {
-    display: inline-block;
-    width: 305px;
-    height: 20px;
     text-align: center;
-    border: inset, outset; 
+    min-width: 130px;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    border-radius: 5px;
+    z-index: 0;
+    background: #fff;
+    overflow: hidden;
+    border: 2px solid #ff0a78;
+}
+ul li:hover:after {
+    height: 100%;
+}
+ul li:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    transition: all 0.3s ease;
+    left: 0;
+    bottom: 0;
+    height: 0;
+    width: 100%;
+    background: #ff0a78;
 }
 li a {
-    color: rgb(16, 0, 243); 
     font-size: 20px; 
     font-family: EB Garamond, serif; 
     font-style: italic; 
@@ -45,22 +77,17 @@ li a {
     position: sticky; 
 } 
 a:link {
-    color: rgb(158, 108, 0);
-}
-a:visited {
-    color: rgb(255, 196, 0);
+    color: #ff0a78;
 }
 a:hover {
-    color: rgb(255, 0, 0);
-}
-a:active {
-    color: rgb(162, 0, 255);
+    color: rgb(255, 255, 255);
 }
 .seccion1{
     display: block; 
     font-family: merriweather, serif; 
     text-align: center; 
     padding-top: 5px; 
+    grid-area: seccion1;
 }
 .seccion1 h2, p{
     color:rgb(255, 0, 234); 
@@ -71,6 +98,9 @@ a:active {
 iframe{
     border: 55px rgba(155, 145, 5, 0.733) outset
 }
+.seccion2{
+    grid-area:seccion2;
+}
 .seccion2 h3{
     color: whitesmoke; 
     text-align: left; 
@@ -79,6 +109,10 @@ iframe{
     border-left: 3px solid
     seagreen; 
     padding: 6px;
+    transition: all 1s;
+}
+.seccion2 h3:hover{
+    Padding-left: 10px
 }
 .flex{
     display: flex;
@@ -86,10 +120,11 @@ iframe{
     justify-content: space-evenly;
 }
 footer{
-    background-image: url("../IMG/well\ i\ never.jpg"); 
+    background-image: url("IMG/well\ i\ never.jpg"); 
     background-size: cover;
     width: 100%;
     height: auto;
+    grid-area: footer;
 }
 .contein{
     width: 100%;
@@ -115,6 +150,10 @@ footer{
     font-style: normal;
     border-left: 3px solid seagreen;
     padding: 6px;
+    transition: all 1s;
+}
+.columna p:hover{
+    padding-left:10px;
 }
 .columna2 h4{
     font-size: 25px;
@@ -126,6 +165,10 @@ footer{
 }
 .icons{
     display: flex;
+    transition: font-size 2s;
+}
+.icons:hover{
+    font-size: 18px;
 }
 .icons img{
      width: 20px;
@@ -142,7 +185,7 @@ footer{
     align-items:baseline
 }
 .aboutUs{
-    background-image: url("../IMG/garden.jpg");
+    background-image: url("IMG/garden.jpg");
     background-size: cover;
 
     display: flex;
@@ -157,7 +200,7 @@ position: relative;
 .descript{
     font-size: 25px;
     font-family: EB Garamond;
-    background-image: url("../IMG/cielo.jpg");
+    background-image: url("IMG/cielo.jpg");
     text-align: center;
 }
 .program{
@@ -167,7 +210,7 @@ position: relative;
     background-size: cover
 }
 .fm {
-    background-image: url("../IMG/bus.jpg");
+    background-image: url("IMG/bus.jpg");
     background-size: cover;
     font-size: 15px;
     font-family: merriweather, serif;
@@ -255,7 +298,7 @@ position: relative;
 .tabla{
     margin: 150px auto;
     font-size: 40px;
-    background-image: url("../IMG/bus.jpg");
+    background-image: url("IMG/bus.jpg");
 }
 table, caption{
     background-image: rgba(155, 85, 5, 0.733);
