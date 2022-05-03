@@ -1,6 +1,16 @@
 body {
-    background-image: url("IMG/color.jpg"); 
-    background-size: cover;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    height: 100vh;
+    }
+@keyframes gradient {
+    0% { background-position: 0% 50%;
+}
+    50% { background-position: 100% 50%;
+}
+    100% { background-position: 0% 50%;
+}
 }
 .contenedor{
     display: grid;
@@ -26,7 +36,6 @@ nav{
 }
 .header {
     margin: 5px; 
-    background-image: url("IMG/final.jpg");
     height: 70px; 
     background-size: cover; 
     opacity: 75%;
@@ -100,7 +109,7 @@ a:hover {
     padding-top: 5px; 
 }
 .seccion1 h2, p{
-    color:rgb(255, 0, 234); 
+    color:rgb(2, 0, 2); 
 }
 .seccion1 h2{
     font-size: 60px;
@@ -160,11 +169,15 @@ footer{
     font-size: 18px;
     font-style: normal;
     border-left: 3px solid seagreen;
+    color: whitesmoke;
     padding: 6px;
     transition: all 1s;
 }
 .columna p:hover{
     padding-left:10px;
+}
+.columna2 p{
+    color: whitesmoke;
 }
 .columna2 h4{
     font-size: 25px;
@@ -173,6 +186,9 @@ footer{
     font-family: sans-serif;
     border-left: 3px solid seagreen;
     padding-left: 5px;
+}
+.copyright p{
+    color: whitesmoke;
 }
 .icons{
     display: flex;
@@ -198,14 +214,18 @@ footer{
 .aboutUs{
     background-image: url("IMG/garden.jpg");
     background-size: cover;
-
+    border-bottom-left-radius: 2%;
+    border-bottom-right-radius: 2%;
+    border-top-left-radius: 2%;
+    border-top-right-radius: 2%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 .photo{ 
 border: 10px inset rgba(158, 80, 80, 0.979);
-margin: 30px;
+border-radius: 3px;
+margin: 10px;
 position: relative;
 }
 .descript{
