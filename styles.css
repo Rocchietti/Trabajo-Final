@@ -4,17 +4,28 @@ body {
 }
 .contenedor{
     display: grid;
-    grid-area: "header header"
+    grid-template-areas: "header header"
     "nav nav"
-    "article article"
+    "article section"
+    "linea linea"
     "footer footer";
+    grid-template-columns: 1fr 1fr;
+    row-gap: 10px;
+}
+section{
+    grid-area: section;
+}
+.linea{
+    grid-area:linea;
+}
+article{
+    grid-area: article;
 }
 nav{
     grid-area: nav;
 }
-
 .header {
-    margin: 10px; 
+    margin: 5px; 
     background-image: url("IMG/final.jpg");
     height: 70px; 
     background-size: cover; 
@@ -23,9 +34,9 @@ nav{
 }
 .titulo {
     font-family: merriweather, serif;  
-    font-style: italic; 
-    font-size: 50px; 
-    text-align: center; 
+    margin-block-start: 0.10em;
+    font-size: 3em;
+    text-align:center;
     color: rgb(148, 87, 8);
 }
 .perfil{
@@ -87,7 +98,6 @@ a:hover {
     font-family: merriweather, serif; 
     text-align: center; 
     padding-top: 5px; 
-    grid-area: seccion1;
 }
 .seccion1 h2, p{
     color:rgb(255, 0, 234); 
@@ -97,9 +107,6 @@ a:hover {
 }
 iframe{
     border: 55px rgba(155, 145, 5, 0.733) outset
-}
-.seccion2{
-    grid-area:seccion2;
 }
 .seccion2 h3{
     color: whitesmoke; 
@@ -116,8 +123,12 @@ iframe{
 }
 .flex{
     display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+.portfolio{
+    padding: 10px;
 }
 footer{
     background-image: url("IMG/well\ i\ never.jpg"); 
