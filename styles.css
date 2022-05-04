@@ -214,17 +214,17 @@ footer{
 .aboutUs{
     background-image: url("IMG/garden.jpg");
     background-size: cover;
-    border-bottom-left-radius: 2%;
-    border-bottom-right-radius: 2%;
-    border-top-left-radius: 2%;
-    border-top-right-radius: 2%;
+    border-bottom-left-radius: 10%;
+    border-bottom-right-radius: 10%;
+    border-top-left-radius: 10%;
+    border-top-right-radius: 10%;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 .photo{ 
 border: 10px inset rgba(158, 80, 80, 0.979);
-border-radius: 3px;
+border-radius: 20px;
 margin: 10px;
 position: relative;
 }
@@ -348,7 +348,49 @@ th,td{
 tfoot{
     text-align: center;
 }
-
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  #apple,
+  #twitter,
+  #github,
+  #facebook {
+    font-size: 8em;
+    background-color: #18191f;
+    color: #fff;
+    box-shadow: 2px 2px 2px #00000080, 10px 1px 12px #00000080,
+      2px 2px 10px #00000080, 2px 2px 3px #00000080, inset 2px 2px 10px #00000080,
+      inset 2px 2px 10px #00000080, inset 2px 2px 10px #00000080,
+      inset 2px 2px 10px #00000080;
+    border-radius: 29px;
+    padding: 11px 19px;
+    margin: 0 40px;
+    animation: animate 3s linear infinite;
+    text-shadow: 0 0 50px #0072ff, 0 0 100px #0072ff, 0 0 150px #0072ff,
+      0 0 200px #0072ff;
+  }
+  #twitter {
+    animation-delay: 0.3s;
+  }
+  #facebook {
+    animation-delay: 0.7s;
+  }
+  #github {
+    animation-delay: 0.1s;
+  }
+  
+  @keyframes animate {
+    from {
+      filter: hue-rotate(0deg);
+    }
+    to {
+      filter: hue-rotate(360deg);
+    }
+  }
+  
 
 
 
