@@ -27,7 +27,6 @@ body {
         "nav nav nav"
         "article article article"
         "article section section"
-        "linea linea linea"
         "footer footer footer";
     }
 }
@@ -36,7 +35,6 @@ body {
     grid-template-areas: "header header"
     "nav nav"
     "article section"
-    "linea linea"
     "footer footer";
     grid-template-columns: 1fr 1fr;
     row-gap: 10px;
@@ -153,9 +151,6 @@ iframe{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 10px;
-}
-.portfolio{
     padding: 10px;
 }
 footer{
@@ -279,7 +274,7 @@ article h1{
     padding: 20px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
 }
 .input{
     font-family: inherit;
@@ -315,7 +310,7 @@ article h1{
     flex-direction: row;
     justify-content: space-around;
     background-color: rgb(90, 59, 2);
-    opacity: 50%;
+    opacity: 85%;
     margin: 20px;
 }
 .adobe{
